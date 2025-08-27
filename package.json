@@ -1,0 +1,25 @@
+{
+  "name": "codedev-official",
+  "version": "1.0.0",
+  "description": "CodeDev.Official - Professional Web Development & Software Solutions",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "build": "echo 'No build step required'"
+  },
+  "keywords": ["web-development", "software", "coding", "developer", "portfolio"],
+  "author": "CodeDev.Official",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "compression": "^1.7.4"
+  }
+}
