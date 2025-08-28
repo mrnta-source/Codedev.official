@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeDev.Official - Professional Web Development & Software Solutions</title>
+    <meta name="description" content="CodeDev.Official offers professional web development, software solutions, and digital services. Transform your ideas into reality with our expert team.">
+    <meta name="keywords" content="web development, software development, coding, programming, digital solutions, mobile apps, cloud solutions">
+    <meta name="author" content="CodeDev.Official">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="CodeDev.Official - Professional Web Development">
+    <meta property="og:description" content="Transform your ideas into digital reality with our professional web development and software solutions.">
+    <meta property="og:image" content="/assets/images/og-image.jpg">
+    <meta property="og:url" content="https://codedev.official">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "CodeDev.Official",
+        "url": "https://codedev.official",
+        "logo": "https://codedev.official/assets/images/logo.png",
+        "description": "Professional web development and software solutions",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-555-123-4567",
+            "contactType": "customer service"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <div class="code-loader">
+                <span><</span>
+                <span>CodeDev</span>
+                <span>/></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/" aria-label="CodeDev.Official Home">
+                    <i class="fas fa-code" aria-hidden="true"></i>
+                    <span>CodeDev.Official</span>
+                </a>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="/" class="nav-link active" aria-current="page">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="/services" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/services/web-development">Web Development</a></li>
+                        <li><a href="/services/mobile-apps">Mobile Apps</a></li>
+                        <li><a href="/services/cloud-solutions">Cloud Solutions</a></li>
+                        <li><a href="/services/cybersecurity">Cybersecurity</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="/portfolio" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/blog" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/quote" class="nav-link btn-nav">Get Quote</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background">
+            <div class="particles" id="particles"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content" data-aos="fade-up">
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i>
+                    <span>Trusted by 50+ Companies</span>
+                </div>
+                <h1 class="hero-title">
+                    Transform Your Ideas Into 
+                    <span class="gradient-text typing-text" id="typing-text">Digital Reality</span>
+                </h1>
+                <p class="hero-description">
+                    Professional web development, software solutions, and digital services 
+                    that drive your business forward. We code the future, today.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">150+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">Success Rate</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Support</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="/contact" class="btn btn-primary btn-large">
+                        <i class="fas fa-rocket"></i>
+                        Start Your Project
+                    </a>
+                    <a href="/portfolio" class="btn btn-secondary btn-large">
+                        <i class="fas fa-play"></i>
+                        Watch Demo
+                    </a>
+                </div>
+                <div class="hero-clients">
+                    <p>Trusted by leading companies</p>
+                    <div class="client-logos">
+                        <img src="/assets/images/clients/client1.png" alt="Client 1" loading="lazy">
+                        <img src="/assets/images/clients/client2.png" alt="Client 2" loading="lazy">
+                        <img src="/assets/images/clients/client3.png" alt="Client 3" loading="lazy">
+                        <img src="/assets/images/clients/client4.png" alt="Client 4" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="fade-left">
+                <div class="hero-visual">
+                    <div class="code-animation">
+                        <div class="code-window">
+                            <div class="window-header">
+                                <div class="window-controls">
+                                    <span class="control close"></span>
+                                    <span class="control minimize"></span>
+                                    <span class="control maximize"></span>
+                                </div>
+                                <div class="window-title">main.js</div>
+                            </div>
+                            <div class="code-content">
+                                <div class="code-line">
+                                    <span class="line-number">1</span>
+                                    <span class="code-text">
+                                        <span class="keyword">const</span> 
+                                        <span class="variable">success</span> = 
+                                        <span class="function">CodeDev</span>
+                                        <span class="punctuation">(</span>
+                                        <span class="string">'your-idea'</span>
+                                        <span class="punctuation">);</span>
+                                    </span>
+                                </div>
+                                <div class="code-line">
+                                    <span class="line-number">2</span>
+                                    <span class="code-text">
+                                        <span class="variable">success</span>
+                                        <span class="punctuation">.</span>
+                                        <span class="method">deploy</span>
+                                        <span class="punctuation">();</span>
+                                    </span>
+                                </div>
+                                <div class="code-line">
+                                    <span class="line-number">3</span>
+                                    <span class="code-text">
+                                        <span class="comment">// Your business grows 🚀</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floating-elements">
+                        <div class="floating-icon" style="--delay: 0s">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <div class="floating-icon" style="--delay: 1s">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <div class="floating-icon" style="--delay: 2s">
+                            <i class="fab fa-python"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="services-preview" id="services">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <i class="fas fa-cogs"></i>
+                    <span>Our Expertise</span>
+                </div>
+                <h2>What We Do Best</h2>
+                <p>Comprehensive digital solutions for modern businesses</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Custom websites and web applications built with modern technologies and best practices</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Responsive Design</li>
+                        <li><i class="fas fa-check"></i> SEO Optimized</li>
+                        <li><i class="fas fa-check"></i> Fast Loading</li>
+                    </ul>
+                    <a href="/services/web-development" class="service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card featured" data-aos="fade-up" data-aos-delay="200">
+                    <div class="featured-badge">Most Popular</div>
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3>Mobile Apps</h3>
+                    <p>Native and cross-platform mobile applications for iOS and Android platforms</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Cross-Platform</li>
+                        <li><i class="fas fa-check"></i> Native Performance</li>
+                        <li><i class="fas fa-check"></i> App Store Ready</li>
+                    </ul>
+                    <a href="/services/mobile-apps" class="service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3>Cloud Solutions</h3>
+                    <p>Scalable cloud infrastructure and deployment solutions for modern applications</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Auto Scaling</li>
+                        <li><i class="fas fa-check"></i> 99.9% Uptime</li>
+                        <li><i class="fas fa-check"></i> Global CDN</li>
+                    </ul>
+                    <a href="/services/cloud-solutions" class="service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3>Cybersecurity</h3>
+                    <p>Comprehensive security solutions to protect your digital assets and data</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Threat Detection</li>
+                        <li><i class="fas fa-check"></i> Data Encryption</li>
+                        <li><i class="fas fa-check"></i> 24/7 Monitoring</li>
+                    </ul>
+                    <a href="/services/cybersecurity" class="service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <i class="fas fa-route"></i>
+                    <span>Our Process</span>
+                </div>
+                <h2>How We Work</h2>
+                <p>A proven methodology that delivers exceptional results</p>
+            </div>
+            <div class="process-timeline">
+                <div class="process-step" data-aos="fade-right" data-aos-delay="100">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Discovery & Planning</h3>
+                        <p>We analyze your requirements and create a detailed project roadmap</p>
+                    </div>
+                </div>
+                <div class="process-step" data-aos="fade-left" data-aos-delay="200">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Design & Prototype</h3>
+                        <p>Creating intuitive designs and interactive prototypes for validation</p>
+                    </div>
+                </div>
+                <div class="process-step" data-aos="fade-right" data-aos-delay="300">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Development</h3>
+                        <p>Building your solution with clean, scalable, and maintainable code</p>
+                    </div>
+                </div>
+                <div class="process-step" data-aos="fade-left" data-aos-delay="400">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Testing & Launch</h3>
+                        <p>Rigorous testing followed by smooth deployment and ongoing support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="stat-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="stat-number" data-target="150">0</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="stat-icon">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <div class="stat-number" data-target="98">0</div>
+                    <div class="stat-label">Client Satisfaction %</div>
+                </div>
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="stat-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="stat-number" data-target="24">0</div>
+                    <div class="stat-label">Support Hours</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies -->
+    <section class="technologies" id="technologies">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <i class="fas fa-tools"></i>
+                    <span>Tech Stack</span>
+                </div>
+                <h2>Technologies We Master</h2>
+                <p>Cutting-edge tools and frameworks for superior results</p>
+            </div>
+            <div class="tech-categories">
+                <div class="tech-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Frontend</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-vue"></i>
+                            <span>Vue.js</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-angular"></i>
+                            <span>Angular</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Backend</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-php"></i>
+                            <span>PHP</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-java"></i>
+                            <span>Java</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-category" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Cloud & DevOps</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <i class="fab fa-aws"></i>
+                            <span>AWS</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-docker"></i>
+                            <span>Docker</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-google"></i>
+                            <span>Google Cloud</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-microsoft"></i>
+                            <span>Azure</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <i class="fas fa-quote-left"></i>
+                    <span>Testimonials</span>
+                </div>
+                <h2>What Our Clients Say</h2>
+                <p>Real feedback from real clients</p>
+            </div>
+            <div class="testimonials-slider" id="testimonials-slider">
+                <div class="testimonial-card active" data-aos="fade-up">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"CodeDev.Official transformed our business with their exceptional web development services. The team is professional, responsive, and delivers quality work on time."</p>
+                        <div class="testimonial-author">
+                            <img src="/assets/images/testimonials/client1.jpg" alt="John Smith" loading="lazy">
+                            <div class="author-info">
+                                <h4>John Smith</h4>
+                                <span>CEO, TechCorp</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Outstanding mobile app development! They created exactly what we envisioned and more. Highly recommend their services to anyone looking for quality development."</p>
+                        <div class="testimonial-author">
+                            <img src="/assets/images/testimonials/client2.jpg" alt="Sarah Johnson" loading="lazy">
+                            <div class="author-info">
+                                <h4>Sarah Johnson</h4>
+                                <span>Founder, StartupXYZ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Their cloud solutions helped us scale our infrastructure seamlessly. The team's expertise in modern technologies is impressive and their support is top-notch."</p>
+                        <div class="testimonial-author">
+                            <img src="/assets/images/testimonials/client3.jpg" alt="Mike Davis" loading="lazy">
+                            <div class="author-info">
+                                <h4>Mike Davis</h4>
+                                <span>CTO, InnovateLab</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-controls">
+                <button class="testimonial-btn prev" id="prev-testimonial">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="testimonial-dots" id="testimonial-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                </div>
+                <button class="testimonial-btn next" id="next-testimonial">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <i class="fas fa-question-circle"></i>
+                    <span>FAQ</span>
+                </div>
+                <h2>Frequently Asked Questions</h2>
+                <p>Get answers to common questions about our services</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question">
+                        <h3>How long does a typical project take?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Project timelines vary depending on complexity and scope. A simple website typically takes 2-4 weeks, while complex web applications can take 2-6 months. We provide detailed timelines during the planning phase.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question">
+                        <h3>Do you provide ongoing support and maintenance?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer comprehensive support and maintenance packages to ensure your application runs smoothly. This includes bug fixes, security updates, performance optimization, and feature enhancements.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-question">
+                        <h3>What technologies do you specialize in?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We specialize in modern web technologies including React, Node.js, Python, cloud platforms (AWS, Google Cloud, Azure), mobile development (React Native, Flutter), and various databases and frameworks.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="faq-question">
+                        <h3>Can you work with our existing team?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We can integrate seamlessly with your existing team, whether you need additional developers, technical leadership, or specialized expertise for specific projects.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="cta">
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <div class="cta-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h2>Ready to Start Your Next Project?</h2>
+                <p>Let's discuss how we can help bring your vision to life with our expert development team</p>
+                <div class="cta-buttons">
+                    <a href="/contact" class="btn btn-primary btn-large">
+                        <i class="fas fa-paper-plane"></i>
+                        Get Started Today
+                    </a>
+                    <a href="/portfolio" class="btn btn-outline btn-large">
+                        <i class="fas fa-folder-open"></i>
+                        View Portfolio
+                    </a>
+                </div>
+                <div class="cta-features">
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Free Consultation</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>No Hidden Costs</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>24/7 Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-code"></i>
+                        <span>CodeDev.Official</span>
+                    </div>
+                    <p>Professional web development and software solutions that drive business growth and digital transformation.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/codedev-official" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/codedev-official" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com/codedev_official" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                                                    <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://youtube.com/codedev-official" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="/services/web-development">Web Development</a></li>
+                        <li><a href="/services/mobile-apps">Mobile Apps</a></li>
+                        <li><a href="/services/cloud-solutions">Cloud Solutions</a></li>
+                        <li><a href="/services/cybersecurity">Cybersecurity</a></li>
+                        <li><a href="/services/consulting">Consulting</a></li>
+                        <li><a href="/services/maintenance">Maintenance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/portfolio">Portfolio</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/careers">Careers</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="/documentation">Documentation</a></li>
+                        <li><a href="/support">Support Center</a></li>
+                        <li><a href="/downloads">Downloads</a></li>
+                        <li><a href="/case-studies">Case Studies</a></li>
+                        <li><a href="/whitepaper">Whitepapers</a></li>
+                        <li><a href="/newsletter">Newsletter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="contact-details">
+                                <span>Email</span>
+                                <a href="mailto:info@codedev.official">info@codedev.official</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div class="contact-details">
+                                <span>Phone</span>
+                                <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="contact-details">
+                                <span>Address</span>
+                                <p>123 Tech Street<br>New York, NY 10001</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div class="contact-details">
+                                <span>Business Hours</span>
+                                <p>Mon - Fri: 9:00 AM - 6:00 PM<br>Sat: 10:00 AM - 4:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <div class="newsletter-content">
+                    <div class="newsletter-info">
+                        <h3>Stay Updated</h3>
+                        <p>Subscribe to our newsletter for the latest updates, tips, and industry insights</p>
+                    </div>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" placeholder="Enter your email address" required>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Subscribe
+                            </button>
+                        </div>
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="newsletter-consent" required>
+                            <label for="newsletter-consent">I agree to receive marketing communications</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div class="copyright">
+                        <p>© 2024 CodeDev.Official. All rights reserved.</p>
+                    </div>
+                    <div class="footer-links">
+                        <a href="/terms">Terms of Service</a>
+                        <a href="/privacy">Privacy Policy</a>
+                        <a href="/cookies">Cookie Policy</a>
+                        <a href="/sitemap">Sitemap</a>
+                    </div>
+                    <div class="footer-certifications">
+                        <img src="/assets/images/certifications/iso-cert.png" alt="ISO Certification" loading="lazy">
+                        <img src="/assets/images/certifications/security-cert.png" alt="Security Certification" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookie-banner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <i class="fas fa-cookie-bite"></i>
+                <p>We use cookies to enhance your browsing experience and provide personalized content. By continuing to use our site, you agree to our cookie policy.</p>
+            </div>
+            <div class="cookie-actions">
+                <button class="btn btn-outline btn-small" id="cookie-settings">Settings</button>
+                <button class="btn btn-primary btn-small" id="cookie-accept">Accept All</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Live Chat Widget -->
+    <div class="chat-widget" id="chat-widget">
+        <div class="chat-toggle" id="chat-toggle">
+            <i class="fas fa-comments"></i>
+            <span class="chat-notification">1</span>
+        </div>
+        <div class="chat-window" id="chat-window">
+            <div class="chat-header">
+                <div class="chat-agent">
+                    <img src="/assets/images/team/support-agent.jpg" alt="Support Agent" loading="lazy">
+                    <div class="agent-info">
+                        <h4>Sarah</h4>
+                        <span class="status online">Online</span>
+                    </div>
+                </div>
+                <button class="chat-close" id="chat-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="message agent-message">
+                    <p>Hi! 👋 How can I help you today?</p>
+                    <span class="message-time">Just now</span>
+                </div>
+            </div>
+            <div class="chat-input">
+                <form class="chat-form" id="chat-form">
+                    <input type="text" placeholder="Type your message..." id="chat-input-field">
+                    <button type="submit">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="/assets/js/particles.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+    
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+
+    <!-- Schema Markup for Local Business -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "CodeDev.Official",
+        "image": "https://codedev.official/assets/images/logo.png",
+        "url": "https://codedev.official",
+        "telephone": "+1-555-123-4567",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Tech Street",
+            "addressLocality": "New York",
+            "addressRegion": "NY",
+            "postalCode": "10001",
+            "addressCountry": "US"
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "10:00",
+                "closes": "16:00"
+            }
+        ],
+        "sameAs": [
+            "https://github.com/codedev-official",
+            "https://linkedin.com/company/codedev-official",
+            "https://twitter.com/codedev_official",
+            "https://instagram.com/codedev.official"
+        ]
+    }
+    </script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('ServiceWorker registration successful');
+                    })
+                    .catch(function(err) {
+                        console.log('ServiceWorker registration failed');
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
