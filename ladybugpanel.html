@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ladybug Panel ZW - Advanced Development Tools</title>
+    <meta name="description" content="Ladybug Panel ZW - Professional development and debugging tools created by Mr Ntando Ofc">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/ladybug-favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/ladybug-panel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="ladybug-body">
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="ladybug-logo">
+                <i class="fas fa-bug"></i>
+            </div>
+            <h2>Ladybug Panel ZW</h2>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p>Initializing development environment...</p>
+        </div>
+    </div>
+
+    <!-- Main Panel -->
+    <div id="mainPanel" class="main-panel hidden">
+        <!-- Header -->
+        <header class="panel-header">
+            <div class="header-left">
+                <div class="logo-section">
+                    <i class="fas fa-bug logo-icon"></i>
+                    <div class="logo-text">
+                        <h1>Ladybug Panel ZW</h1>
+                        <span class="version">v2.1.0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="header-center">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search tools, commands, or documentation..." id="globalSearch">
+                </div>
+            </div>
+            
+            <div class="header-right">
+                <div class="header-controls">
+                    <button class="control-btn" id="notificationBtn" title="Notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <button class="control-btn" id="settingsBtn" title="Settings">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                    <button class="control-btn" id="fullscreenBtn" title="Toggle Fullscreen">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                    <div class="user-profile">
+                        <img src="/assets/images/mr-ntando.jpg" alt="Mr Ntando Ofc" class="profile-img">
+                        <span class="username">Mr Ntando Ofc</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <h3 class="nav-title">Development Tools</h3>
+                    <ul class="nav-list">
+                        <li class="nav-item active" data-panel="dashboard">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </li>
+                        <li class="nav-item" data-panel="code-editor">
+                            <i class="fas fa-code"></i>
+                            <span>Code Editor</span>
+                        </li>
+                        <li class="nav-item" data-panel="terminal">
+                            <i class="fas fa-terminal"></i>
+                            <span>Terminal</span>
+                        </li>
+                        <li class="nav-item" data-panel="file-manager">
+                            <i class="fas fa-folder-open"></i>
+                            <span>File Manager</span>
+                        </li>
+                        <li class="nav-item" data-panel="database">
+                            <i class="fas fa-database"></i>
+                            <span>Database</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-section">
+                    <h3 class="nav-title">Debugging & Testing</h3>
+                    <ul class="nav-list">
+                        <li class="nav-item" data-panel="debugger">
+                            <i class="fas fa-bug"></i>
+                            <span>Debugger</span>
+                        </li>
+                        <li class="nav-item" data-panel="api-tester">
+                            <i class="fas fa-flask"></i>
+                            <span>API Tester</span>
+                        </li>
+                        <li class="nav-item" data-panel="performance">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Performance</span>
+                        </li>
+                        <li class="nav-item" data-panel="logs">
+                            <i class="fas fa-list-alt"></i>
+                            <span>Logs</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-section">
+                    <h3 class="nav-title">System Tools</h3>
+                    <ul class="nav-list">
+                        <li class="nav-item" data-panel="system-monitor">
+                            <i class="fas fa-desktop"></i>
+                            <span>System Monitor</span>
+                        </li>
+                        <li class="nav-item" data-panel="network">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Network</span>
+                        </li>
+                        <li class="nav-item" data-panel="security">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Security</span>
+                        </li>
+                        <li class="nav-item" data-panel="backup">
+                            <i class="fas fa-save"></i>
+                            <span>Backup</span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="creator-info">
+                    <div class="creator-avatar">
+                        <img src="/assets/images/mr-ntando.jpg" alt="Mr Ntando Ofc">
+                    </div>
+                    <div class="creator-details">
+                        <p class="creator-name">Created by</p>
+                        <p class="creator-title">Mr Ntando Ofc</p>
+                        <p class="creator-role">Lead Developer</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Dashboard Panel -->
+            <div id="dashboard" class="content-panel active">
+                <div class="panel-header-section">
+                    <h2><i class="fas fa-tachometer-alt"></i> Dashboard</h2>
+                    <p>Welcome to Ladybug Panel ZW - Your comprehensive development environment</p>
+                </div>
+                
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Active Projects</h3>
+                            <span class="stat-number">12</span>
+                            <span class="stat-change positive">+2 this week</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Server Uptime</h3>
+                            <span class="stat-number">99.9%</span>
+                            <span class="stat-change positive">Excellent</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Git Commits</h3>
+                            <span class="stat-number">247</span>
+                            <span class="stat-change positive">+15 today</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Bugs Fixed</h3>
+                            <span class="stat-number">89</span>
+                            <span class="stat-change positive">+5 today</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Actions -->
+                <div class="quick-actions">
+                    <h3>Quick Actions</h3>
+                    <div class="actions-grid">
+                        <button class="action-btn" data-action="new-project">
+                            <i class="fas fa-plus"></i>
+                            <span>New Project</span>
+                        </button>
+                        <button class="action-btn" data-action="run-tests">
+                            <i class="fas fa-play"></i>
+                            <span>Run Tests</span>
+                        </button>
+                        <button class="action-btn" data-action="deploy">
+                            <i class="fas fa-rocket"></i>
+                            <span>Deploy</span>
+                        </button>
+                        <button class="action-btn" data-action="backup">
+                            <i class="fas fa-download"></i>
+                            <span>Backup</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Recent Activity -->
+                <div class="recent-activity">
+                    <h3>Recent Activity</h3>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p><strong>Code committed</strong> to main branch</p>
+                                <span class="activity-time">2 minutes ago</span>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-bug"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p><strong>Bug fixed</strong> in authentication module</p>
+                                <span class="activity-time">15 minutes ago</span>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p><strong>Deployment successful</strong> to production</p>
+                                <span class="activity-time">1 hour ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Code Editor Panel -->
+            <div id="code-editor" class="content-panel">
+                <div class="panel-header-section">
+                    <h2><i class="fas fa-code"></i> Code Editor</h2>
+                    <div class="editor-controls">
+                        <select id="languageSelect">
+                            <option value="javascript">JavaScript</option>
+                            <option value="python">Python</option>
+                            <option value="html">HTML</option>
+                            <option value="css">CSS</option>
+                            <option value="php">PHP</option>
+                        </select>
+                        <button class="btn btn-primary" id="runCode">
+                            <i class="fas fa-play"></i> Run
+                        </button>
+                        <button class="btn btn-secondary" id="saveCode">
+                            <i class="fas fa-save"></i> Save
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="editor-container">
+                    <div class="editor-sidebar">
+                        <div class="file-tree">
+                            <h4>Project Files</h4>
+                            <ul class="tree">
+                                <li class="folder">
+                                    <i class="fas fa-folder"></i> src
+                                    <ul>
+                                        <li class="file active"><i class="fas fa-file-code"></i> index.js</li>
+                                        <li class="file"><i class="fas fa-file-code"></i> app.js</li>
+                                        <li class="file"><i class="fas fa-file-code"></i> utils.js</li>
+                                    </ul>
+                                </li>
+                                <li class="folder">
+                                    <i class="fas fa-folder"></i> public
+                                    <ul>
+                                        <li class="file"><i class="fas fa-file-code"></i> index.html</li>
+                                        <li class="file"><i class="fas fa-file-code"></i> style.css</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="editor-main">
+                        <div class="editor-tabs">
+                            <div class="tab active">
+                                <span>index.js</span>
+                                <i class="fas fa-times"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="code-editor-area">
+                            <textarea id="codeEditor" placeholder="// Welcome to Ladybug Panel ZW Code Editor
+// Created by Mr Ntando Ofc
+
+console.log('Hello from Ladybug Panel ZW!');
+
+function ladybugGreeting() {
+    return 'Welcome to the most advanced development panel!';
+}
+
+ladybugGreeting();"></textarea>
+                        </div>
+                        
+                        <div class="editor-output">
+                            <h4>Output</h4>
+                            <div class="output-content" id="codeOutput">
+                                <p class="output-line">Ready to execute code...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Terminal Panel -->
+            <div id="terminal" class="content-panel">
+                <div class="panel-header-section">
+                    <h2><i class="fas fa-terminal"></i> Terminal</h2>
+                    <div class="terminal-controls">
+                        <button class="btn btn-secondary" id="clearTerminal">
+                            <i class="fas fa-trash"></i> Clear
+                        </button>
+                        <button class="btn btn-secondary" id="newTerminal">
+                            <i class="fas fa-plus"></i> New Tab
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="terminal-container">
+                    <div class="terminal-tabs">
+                        <div class="terminal-tab active">
+                            <span>Terminal 1</span>
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="terminal-content">
+                        <div class="terminal-output" id="terminalOutput">
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">ladybug@zw:~$</span>
+                                <span class="terminal-text">Welcome to Ladybug Panel ZW Terminal</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">ladybug@zw:~$</span>
+                                <span class="terminal-text">Created by Mr Ntando Ofc</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">ladybug@zw:~$</span>
+                                <span class="terminal-text">Type 'help' for available commands</span>
+                            </div>
+                        </div>
+                        
+                        <div class="terminal-input-line">
+                            <span class="terminal-prompt">ladybug@zw:~$</span>
+                            <input type="text" class="terminal-input" id="terminalInput" placeholder="Enter command..." autofocus>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- System Monitor Panel -->
+            <div id="system-monitor" class="content-panel">
+                <div class="panel-header-section">
+                    <h2><i class="fas fa-desktop"></i> System Monitor</h2>
+                    <div class="monitor-controls">
+                        <button class="btn btn-primary" id="refreshStats">
+                            <i class="fas fa-sync"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="monitor-grid">
+                    <div class="monitor-card">
+                        <h3>CPU Usage</h3>
+                        <div class="progress-circle" data-percentage="65">
+                            <div class="progress-circle-inner">
+                                <span class="percentage">65%</span>
+                            </div>
+                        </div>
+                        <div class="monitor-details">
+                            <p>Intel Core i7-9700K</p>
+                            <p>8 Cores, 16 Threads</p>
+                        </div>
+                    </div>
+                    
+                    <div class="monitor-card">
+                        <h3>Memory Usage</h3>
+                        <div class="progress-circle" data-percentage="42">
+                            <div class="progress-circle-inner">
+                                <span class="percentage">42%</span>
+                            </div>
+                        </div>
+                        <div class="monitor-details">
+                            <p>6.7 GB / 16 GB</p>
+                            <p>DDR4 3200MHz</p>
+                        </div>
+                    </div>
+                    
+                    <div class="monitor-card">
+                        <h3>Disk Usage</h3>
+                        <div class="progress-circle" data-percentage="78">
+                            <div class="progress-circle-inner">
+                                <span class="percentage">78%</span>
+                            </div>
+                        </div>
+                        <div class="monitor-details">
+                            <p>390 GB / 500 GB</p>
+                            <p>NVMe SSD</p>
+                        </div>
+                    </div>
+                    
+                    <div class="monitor-card">
+                        <h3>Network</h3>
+                        <div class="network-stats">
+                            <div class="network-item">
+                                <i class="fas fa-arrow-down"></i>
+                                <span>Download: 125 Mbps</span>
+                            </div>
+                            <div class="network-item">
+                                <i class="fas fa-arrow-up"></i>
+                                <span>Upload: 45 Mbps</span>
+                            </div>
+                        </div>
+                        <div class="monitor-details">
+                            <p>Ethernet Connection</p>
+                            <p>Latency: 12ms</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="system-info">
+                    <h3>System Information</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-label">OS:</span>
+                            <span class="info-value">Ubuntu 22.04 LTS</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Kernel:</span>
+                            <span class="info-value">5.15.0-56-generic</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Uptime:</span>
+                            <span class="info-value">7 days, 14 hours</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Load Average:</span>
+                            <span class="info-value">0.85, 0.92, 1.01</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- API Tester Panel -->
+            <div id="api-tester" class="content-panel">
+                <div class="panel-header-section">
+                    <h2><i class="fas fa-flask"></i> API Tester</h2>
+                    <div class="api-controls">
+                        <button class="btn btn-primary" id="sendRequest">
+                            <i class="fas fa-paper-plane"></i> Send Request
+                        </button>
+                        <button class="btn btn-secondary" id="saveRequest">
+                            <i class="fas fa-save"></i> Save
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="api-tester-container">
+                    <div class="request-section">
+                        <div class="request-line">
+                            <select id="httpMethod">
+                                <option value="GET">GET</option>
+                                <option value="POST">POST</option>
+                                <option value="PUT">PUT</option>
+                                <option value="DELETE">DELETE</option>
+                                <option value="PATCH">PATCH</option>
+                            </select>
+                            <input type="url" id="apiUrl" placeholder="Enter API URL..." value="https://api.example.com/users">
+                        </div>
+                        
+                        <div class="request-tabs">
+                            <button class="tab-btn active" data-tab="headers">Headers</button>
+                            <button class="tab-btn" data-tab="body">Body</button>
+                            <button class="tab-btn" data-tab="auth">Auth</button>
+                        </div>
+                        
+                        <div class="tab-content">
+                            <div id="headers" class="tab-pane active">
+                                <textarea placeholder="Content-Type: application/json
+Authorization: Bearer your-token-here"></textarea>
+                            </div>
+                            <div id="body" class="tab-pane">
+                                <textarea placeholder='{
+  "name": "John Doe",
+  "email": "john@example.com"
+}'></textarea>
+                            </div>
+                            <div id="auth" class="tab-pane">
+                                <div class="auth-form">
+                                    <select>
+                                        <option>No Auth</option>
+                                        <option>Bearer Token</option>
+                                        <option>Basic Auth</option>
+                                        <option>API Key</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="response-section">
+                        <h3>Response</h3>
+                        <div class="response-info">
+                            <span class="status-code">200</span>
+                            <span class="response-time">245ms</span>
+                            <span class="response-size">1.2KB</span>
+                        </div>
+                        <div class="response-content">
+                            <pre id="responseOutput">{
+  "message": "Ready to test APIs with Ladybug Panel ZW",
+  "created_by": "Mr Ntando Ofc",
+  "version": "2.1.0"
+}</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Notification Panel -->
+    <div id="notificationPanel" class="notification-panel">
+        <div class="notification-header">
+            <h3>Notifications</h3>
+            <button class="close-btn" id="closeNotifications">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="notification-list">
+            <div class="notification-item">
+                <div class="notification-icon">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <div class="notification-content">
+                    <h4>System Update Available</h4>
+                    <p>Ladybug Panel ZW v2.1.1 is ready for installation</p>
+                    <span class="notification-time">5 minutes ago</span>
+                </div>
+            </div>
+            
+            <div class="notification-item">
+                <div class="notification-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="notification-content">
+                    <h4>Deployment Successful</h4>
+                    <p>Your application has been deployed successfully</p>
+                    <span class="notification-time">1 hour ago</span>
+                </div>
+            </div>
+            
+            <div class="notification-item">
+                <div class="notification-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="notification-content">
+                    <h4>High CPU Usage</h4>
+                    <p>CPU usage has exceeded 80% for the last 10 minutes</p>
+                    <span class="notification-time">2 hours ago</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/assets/js/ladybug-panel.js"></script>
+</body>
+</html>
