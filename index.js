@@ -87,6 +87,34 @@ app.get('/admin.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'admin.html'));
 });
 
+// NEW PAGES
+// Ladybug Panel page
+app.get('/ladybugpanel', (req, res) => {
+    res.sendFile(path.join(__dirname, 'ladybugpanel.html'));
+});
+
+app.get('/ladybugpanel.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'ladybugpanel.html'));
+});
+
+// YouTube page
+app.get('/youtube', (req, res) => {
+    res.sendFile(path.join(__dirname, 'youtube.html'));
+});
+
+app.get('/youtube.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'youtube.html'));
+});
+
+// GitHub page
+app.get('/github', (req, res) => {
+    res.sendFile(path.join(__dirname, 'github.html'));
+});
+
+app.get('/github.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'github.html'));
+});
+
 // API Routes
 // Contact form submission
 app.post('/api/contact', (req, res) => {
@@ -138,6 +166,43 @@ app.post('/api/project-inquiry', (req, res) => {
     });
 });
 
+// YouTube API - Get channel videos
+app.get('/api/youtube/videos', (req, res) => {
+    // This would typically fetch from YouTube API
+    console.log('🎥 YouTube videos requested');
+    
+    res.json({ 
+        success: true, 
+        message: 'YouTube videos fetched successfully',
+        videos: [] // Add your video data here
+    });
+});
+
+// GitHub API - Get repositories
+app.get('/api/github/repos', (req, res) => {
+    // This would typically fetch from GitHub API
+    console.log('📂 GitHub repositories requested');
+    
+    res.json({ 
+        success: true, 
+        message: 'GitHub repositories fetched successfully',
+        repos: [] // Add your repo data here
+    });
+});
+
+// Ladybug Panel API
+app.post('/api/ladybugpanel/action', (req, res) => {
+    const { action, data } = req.body;
+    
+    console.log(`🐞 Ladybug Panel Action: ${action}`);
+    console.log('Data:', data);
+    
+    res.json({ 
+        success: true, 
+        message: `Ladybug Panel action '${action}' executed successfully` 
+    });
+});
+
 // 404 handler
 app.use((req, res) => {
     res.status(404).sendFile(path.join(__dirname, '404.html'));
@@ -161,16 +226,22 @@ app.listen(PORT, () => {
     console.log(`📅 Started: ${new Date().toLocaleString()}`);
     console.log('═══════════════════════════════════════');
     console.log('📊 Available Routes:');
-    console.log('   GET  /           - Homepage');
-    console.log('   GET  /about      - About Us');
-    console.log('   GET  /services   - Our Services');
-    console.log('   GET  /portfolio  - Portfolio');
-    console.log('   GET  /blog       - Blog');
-    console.log('   GET  /contact    - Contact');
-    console.log('   GET  /admin      - Admin Panel');
-    console.log('   POST /api/contact - Contact Form');
-    console.log('   POST /api/newsletter - Newsletter');
+    console.log('   GET  /                    - Homepage');
+    console.log('   GET  /about               - About Us');
+    console.log('   GET  /services            - Our Services');
+    console.log('   GET  /portfolio           - Portfolio');
+    console.log('   GET  /blog                - Blog');
+    console.log('   GET  /contact             - Contact');
+    console.log('   GET  /admin               - Admin Panel');
+    console.log('   GET  /ladybugpanel        - Ladybug Panel');
+    console.log('   GET  /youtube             - YouTube Channel');
+    console.log('   GET  /github              - GitHub Projects');
+    console.log('   POST /api/contact         - Contact Form');
+    console.log('   POST /api/newsletter      - Newsletter');
     console.log('   POST /api/project-inquiry - Project Inquiry');
+    console.log('   GET  /api/youtube/videos  - YouTube Videos');
+    console.log('   GET  /api/github/repos    - GitHub Repos');
+    console.log('   POST /api/ladybugpanel/action - Ladybug Actions');
     console.log('═══════════════════════════════════════');
 });
 
